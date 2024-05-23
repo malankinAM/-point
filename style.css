@@ -1,0 +1,193 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .picture {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        body {
+            
+            background: url(./file\ \(4\).png) no-repeat center center;
+    background-size: cover; /* Растягивает фон по всему экрану */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+        }
+        
+        .ball {
+            width: 250px;
+            height: 250px;
+            background-color: #394989;
+            position: absolute;
+            top: 100px;
+            left: 130px;
+            border-radius: 50%;
+        }
+        
+        .ball::before {
+            content: "";
+            width: 180px;
+            height: 250px;
+            background-color: #cbeaed;
+            position: absolute;
+            border-radius: 50%;
+            left: 35px;
+        }
+        
+        .ball::after {
+            content: "";
+            width: 70px;
+            height: 250px;
+            background-color: #394989;
+            position: absolute;
+            border-radius: 50%;
+            left: 90px;
+        }
+        
+        .animal {
+            width: 100px;
+            height: 100px;
+            background-color: #9c5518;
+            position: absolute;
+            border-radius: 50%;
+            top: 100px;
+            left: 100px;
+            animation: move 2.5s ease-in-out 2s infinite alternate;
+        }
+        
+        .animal::before {
+            content: "";
+            width: 5px;
+            height: 5px;
+            background-color: #000;
+            position: absolute;
+            border-radius: 50%;
+            top: 40px;
+            left: 20px;
+        }
+        
+        .animal::after {
+            content: "";
+            width: 5px;
+            height: 5px;
+            background-color: #000;
+            position: absolute;
+            border-radius: 50%;
+            top: 30px;
+            left: 60px;
+        }
+        
+        .nose {
+            width: 50px;
+            height: 50px;
+            background-color: #be9169;
+            position: absolute;
+            border-radius: 50%;
+            right: 22px;
+            bottom: 9px;
+        }
+        
+        .nose::before {
+            content: "";
+            width: 25px;
+            height: 15px;
+            background-color: #000;
+            position: absolute;
+            border-radius: 70%;
+            top: 10px;
+            right: 15px;
+            transform: rotate(-20deg);
+        }
+        
+        .nose::after {
+            content: "";
+            width: 3px;
+            height: 10px;
+            background-color: #000;
+            position: absolute;
+            top: 20px;
+            left: 23px;
+            transform: rotate(-20deg);
+        }
+        
+        .left-ear {
+            width: 40px;
+            height: 40px;
+            background-color: #9c5518;
+            border-radius: 50%;
+            position: absolute;
+            top: 110px;
+            left: 80px;
+            animation: move 2.5s ease-in-out 2s infinite alternate;
+        }
+        
+        .left-ear::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 9px;
+            left: 8px;
+        }
+        
+        .right-ear {
+            width: 40px;
+            height: 40px;
+            background-color: #9c5518;
+            border-radius: 50%;
+            position: absolute;
+            top: 90px;
+            left: 160px;
+            animation: move 2.5s ease-in-out 2s infinite alternate;
+        }
+        
+        .right-ear::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            border-radius: 50%;
+            position: absolute;
+            top: 7px;
+            left: 11px;
+        }
+        
+        @keyframes move{
+            from {transform: translate(50px, 50px);}
+            to {transform: translate(-15px, -15px);}
+        }
+        
+        
+@media (max-width: 600px) {
+    .ball {
+        top: 20%;
+        left: 10%;
+    }
+    .animal {
+        top: 20%;
+        left: 5%;
+    }
+    .left-ear {
+        top: 20%;
+        left: 2%;
+    }
+    .right-ear {
+        top: 19%;
+        left: 18%;
+    }
+
+    body {
+            background-size: 100%; /* Масштабирование фона до размера контейнера */
+        }
+}
